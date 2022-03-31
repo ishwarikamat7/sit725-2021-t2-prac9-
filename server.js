@@ -1,16 +1,26 @@
-const express = require("express");
+var express = require("express")
+var app = express()
 
-const app = express();
-const port = 3030; 
+app.use(express.static(__dirname+'/public'))
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
-const addTwoNumber = (n1,n2) => {
-    return n1+n2;
+const addNumbers = (number1, number2) => {
+    var num1 = parseInt(number1)
+    var num2 = parseInt(number2)
+    var result = num1 + num2;
+    return result;
 }
 
-console.log(addTwoNumber(10,3));
-app.get("/addTwoNumber", (req,res) => {
-    const n1 = parseInt(req.query.n1);
-    const n2 = parseInt(req.query.n2);
-    const result = addTwoNumber(n1,n2);
-    res.send("The result is", +result);
+app.get("/addTwoNumbers",(req,res) => {
+    var number1 = req.query.number1;
+    var number2 = req.query.number2;
+    var result = addNumbers(number1,number2)
+    res.json({statusCode: 200, data: result, message:"Success"})
+})
+
+var port = process.env.port || 3000;
+
+app.listen(port,()=>{
+    console.log("App running at http://localhost:"+port)
 })

@@ -1,18 +1,26 @@
 {
-    "name": "SIT725_prac3-practice",
-    "version": "1.0.0",
-    "description": "week 3 template for practical 3",
-    "main": "server.js",
-    "scripts": {},
-    "repository": {
-      "type": "git",
-      "url": ""
-    },
-    "author": "Ishwari Kamat",
-    "license": "MIT",
-    "dependencies": {
-      "express": "^4.17.3",
-      "nodemon": "^2.0.15"
-    }
+  "name": "sit725-2022-t1-prac2",
+  "version": "1.0.0",
+  "description": "week 2 prac for SIT 725 2022",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChoudharyNavit22/sit725-2022-t1-prac2.git"
+  },
+  "keywords": [
+    "Express",
+    "NodeJs"
+  ],
+  "author": "Navit Choudhary",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ChoudharyNavit22/sit725-2022-t1-prac2/issues"
+  },
+  "homepage": "https://github.com/ChoudharyNavit22/sit725-2022-t1-prac2#readme",
+  "dependencies": {
+    "express": "^4.17.3"
   }
-  
+}
