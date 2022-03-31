@@ -1,26 +1,28 @@
 {
-  "name": "sit725-2022-t1-prac2",
+  "name": "SIT725_prac3-practice",
   "version": "1.0.0",
-  "description": "week 2 prac for SIT 725 2022",
+  "description": "week 3 prac for SIT 725 2022",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ChoudharyNavit22/sit725-2022-t1-prac2.git"
+    "url": "git+https://github.com/ishwarikamat7/SIT725_prac3-practice"
   },
   "keywords": [
     "Express",
     "NodeJs"
   ],
-  "author": "Navit Choudhary",
+  "author": "Ishwari Kamat",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ChoudharyNavit22/sit725-2022-t1-prac2/issues"
+    "url": "https://github.com/ishwarikamat7/SIT725_prac3-practice/issues"
   },
-  "homepage": "https://github.com/ChoudharyNavit22/sit725-2022-t1-prac2#readme",
+  "homepage": "https://github.com/ishwarikamat7/SIT725_prac3-practice#readme",
   "dependencies": {
-    "express": "^4.17.3"
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15"
   }
 }
