@@ -1,7 +1,7 @@
 {
-    "name": "server.js",
+    "name": "SIT725_prac3-practice",
     "version": "1.0.0",
-    "description": "express",
+    "description": "week 3 template for practical 3",
     "main": "server.js",
     "scripts": {},
     "repository": {
