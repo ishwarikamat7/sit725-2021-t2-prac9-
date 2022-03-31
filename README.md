@@ -1,1 +1,2 @@
-# SIT725_prac3-practice
+# sit725-2021-t2-prac4
+This is a very basic node express application that host a web application. This aplication tries to demonstrate a creation of very simple express app and tries to create a few api's to bring some changes in data.
