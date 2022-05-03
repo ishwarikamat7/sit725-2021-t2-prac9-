@@ -5,7 +5,9 @@ var cors = require("cors")
 let dbConnect = require("./dbConnect");
 let projectRoutes = require("./routes/projectRoute");
 let userRoute = require("./routes/userRoute");
+let http = require('http').createServer(app);
 
+let io = require('socket.io')(http);
 
 app.use(express.static(__dirname+'/public'))
 app.use(express.json());
@@ -15,6 +17,17 @@ app.use(cors())
 app.use('/api/projects',projectRoutes)
 
 app.use('/api/user',userRoute)
+
+io.on('connection', (socket) => {
+    console.log('a user connected', socket.id);
+    socket.on('disconnect', () => {
+      console.log('user disconnected');
+    });
+    setInterval(()=>{
+      socket.emit('number', new Date().toISOString());
+    }, 1000);
+  
+});
 
 const addNumbers = (number1, number2) => {
     var num1 = parseInt(number1)
